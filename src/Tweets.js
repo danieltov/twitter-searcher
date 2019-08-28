@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useGlobal from './store'
 
-import { Card, Image } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
 import './Tweets.css'
 
