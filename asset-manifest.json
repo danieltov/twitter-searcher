@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/twitter-searcher/static/css/main.2cce8147.chunk.css",
+    "main.js": "/twitter-searcher/static/js/main.9b34d78e.chunk.js",
+    "main.js.map": "/twitter-searcher/static/js/main.9b34d78e.chunk.js.map",
+    "runtime~main.js": "/twitter-searcher/static/js/runtime~main.6fb7cb48.js",
+    "runtime~main.js.map": "/twitter-searcher/static/js/runtime~main.6fb7cb48.js.map",
+    "static/js/2.691a397e.chunk.js": "/twitter-searcher/static/js/2.691a397e.chunk.js",
+    "static/js/2.691a397e.chunk.js.map": "/twitter-searcher/static/js/2.691a397e.chunk.js.map",
+    "index.html": "/twitter-searcher/index.html",
+    "precache-manifest.c60b5fb208909837842963b6a76a5b4f.js": "/twitter-searcher/precache-manifest.c60b5fb208909837842963b6a76a5b4f.js",
+    "service-worker.js": "/twitter-searcher/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/twitter-searcher/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/twitter-searcher/static/media/logo.5d5d9eef.svg"
+  }
+}
