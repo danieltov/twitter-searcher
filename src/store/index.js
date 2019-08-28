@@ -4,8 +4,8 @@ import useGlobalHook from 'use-global-hook'
 import * as actions from '../actions'
 
 const initialState = {
-  user: {},
-  tweets: [],
+  user: null,
+  tweets: null,
   status: 'INITIAL'
 }
 

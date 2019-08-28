@@ -24,10 +24,9 @@ export const getData = async (store, input, request = axios) => {
     store.setState({ user, tweets, status })
     console.log(store.state)
   } catch (error) {
-    console.error(error)
     const is404 = error.response && error.response.status === 404
     const status = is404 ? 'NOT_FOUND' : 'ERROR'
-    store.setState(status)
+    store.setState({ status })
     console.log(store.state)
   }
 }
