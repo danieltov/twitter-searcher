@@ -7,16 +7,28 @@ import './User.css'
 
 const User = () => {
   const [globalState] = useGlobal()
-  const { image, handle, followerCount, tweetCount } = globalState.user
+  const {
+    profile_image_url_https: image,
+    screen_name: handle,
+    followers_count: followerCount,
+    statuses_count: tweetCount
+  } = globalState.user
 
   return (
     <aside className='User'>
       <Card>
         <Card.Body>
-          <Image src={image} rounded></Image>
-          <Card.Title>{handle}</Card.Title>
-          <p className='bold'>Followers: {followerCount}</p>
-          <p className='bold'>Tweets: {tweetCount}</p>
+          <Image src={image} thumbnail></Image>
+          <Card.Title className='mt-3 font-weight-bold'>
+            <a href={`https://twitter.com/${handle}`} target='_blank'>
+              @{handle}
+            </a>
+          </Card.Title>
+          <Card.Text>
+            Followers: {followerCount}
+            <br />
+            Tweets: {tweetCount}
+          </Card.Text>
         </Card.Body>
       </Card>
     </aside>
