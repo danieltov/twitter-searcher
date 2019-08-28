@@ -20,14 +20,20 @@ const User = () => {
         <Card.Body>
           <Image src={image} thumbnail></Image>
           <Card.Title className='mt-3 font-weight-bold'>
-            <a href={`https://twitter.com/${handle}`} target='_blank'>
+            <a
+              href={`https://twitter.com/${handle}`}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-info'>
               @{handle}
             </a>
           </Card.Title>
           <Card.Text>
-            Followers: {followerCount}
+            Followers:{' '}
+            {followerCount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             <br />
-            Tweets: {tweetCount}
+            Tweets:{' '}
+            {tweetCount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </Card.Text>
         </Card.Body>
       </Card>
