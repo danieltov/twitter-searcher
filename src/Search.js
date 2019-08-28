@@ -1,31 +1,23 @@
 import React, { useState } from 'react'
-import { getTweets, getUser } from './api'
+import useGlobal from './store'
 
 import { Form, InputGroup, Button } from 'react-bootstrap'
 
 import './Search.css'
 
 const Search = () => {
-  const initState = {
-    user: ''
-  }
-
-  const [formData, setFormData] = useState(initState)
-  const { user } = formData
-
-  const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+  const [globalState, globalActions] = useGlobal()
 
   const onSubmit = e => {
     e.preventDefault()
-    getTweets(user)
-    getUser(user)
-    setFormData(initState)
+    const user = e.target.user.value
+    globalActions.getData(user)
+    console.log(globalState)
   }
 
   return (
     <aside className='Search'>
-      <Form onSubmit={e => onSubmit(e)} autoComplete='off'>
+      <Form onSubmit={onSubmit} autoComplete='off'>
         <InputGroup size='lg' className='mb-3'>
           <InputGroup.Prepend>
             <InputGroup.Text>@</InputGroup.Text>
@@ -35,8 +27,7 @@ const Search = () => {
             name='user'
             type='text'
             placeholder='realDonaldTrump'
-            onChange={e => onChange(e)}
-            value={user}
+            autoComplete='off'
           />
           <InputGroup.Append>
             <Button variant='outline-secondary' type='submit'>

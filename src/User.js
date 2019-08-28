@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+import useGlobal from './store'
+
 import { Card, Image } from 'react-bootstrap'
 
 import './User.css'
 
-const User = data => {
-  const { image, handle, followerCount, tweetCount } = data
+const User = () => {
+  const [globalState] = useGlobal()
+  const { image, handle, followerCount, tweetCount } = globalState.user
+
   return (
     <aside className='User'>
       <Card>
