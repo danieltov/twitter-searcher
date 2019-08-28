@@ -4,6 +4,7 @@ import useGlobal from './store'
 import Container from 'react-bootstrap/Container'
 import Search from './Search'
 import User from './User'
+import Tweets from './Tweets'
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -14,7 +15,7 @@ function App() {
   const { status } = globalState
 
   useEffect(() => {
-    globalActions.getData('realDonaldTrump')
+    globalActions.getData('tim_cook')
   }, [])
 
   return (
@@ -26,7 +27,10 @@ function App() {
       ) : status === 'NOT_FOUND' ? (
         'The user was not found.'
       ) : status === 'SUCCESS' ? (
-        <User />
+        <>
+          <User />
+          <Tweets />
+        </>
       ) : (
         'Loading...'
       )}
