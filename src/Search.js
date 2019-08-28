@@ -26,7 +26,7 @@ const Search = () => {
             size='lg'
             name='user'
             type='text'
-            placeholder='realDonaldTrump'
+            placeholder='tim_cook'
             autoComplete='off'
           />
           <InputGroup.Append>
