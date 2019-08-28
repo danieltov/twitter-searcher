@@ -12,6 +12,7 @@ const Search = () => {
     e.preventDefault()
     const user = e.target.user.value
     globalActions.getData(user)
+    document.getElementsByName('user')[0].value = ''
   }
 
   return (
