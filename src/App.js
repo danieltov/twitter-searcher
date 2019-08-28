@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getTweets, getUser } from './utils/api'
+import useGlobal from './store'
 
 import Container from 'react-bootstrap/Container'
 import Search from './Search'
@@ -8,9 +8,10 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
+  const [globalState, globalActions] = useGlobal()
+
   useEffect(() => {
-    getTweets('realDonaldTrump')
-    getUser('realDonaldTrump')
+    globalActions.getData('realDonaldTrump')
   }, [])
 
   return (

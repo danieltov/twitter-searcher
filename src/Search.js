@@ -12,7 +12,6 @@ const Search = () => {
     e.preventDefault()
     const user = e.target.user.value
     globalActions.getData(user)
-    console.log(globalState)
   }
 
   return (
