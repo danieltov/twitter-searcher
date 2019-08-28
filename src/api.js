@@ -1,6 +1,6 @@
 export const getTweets = async user => {
-  const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-  const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${user}`;
+  const proxyurl = 'https://cors-anywhere.herokuapp.com/'
+  const url = `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${user}`
   return await fetch(proxyurl + url, {
     method: 'GET',
     headers: {
@@ -9,12 +9,12 @@ export const getTweets = async user => {
     }
   })
     .then(res => res.json())
-    .then(result => console.log(result), error => console.error(error));
-};
+    .then(result => console.log(result), error => console.error(error))
+}
 
 export const getUser = async user => {
-  const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-  const url = `https://api.twitter.com/1.1/users/show.json?screen_name=${user}`;
+  const proxyurl = 'https://cors-anywhere.herokuapp.com/'
+  const url = `https://api.twitter.com/1.1/users/show.json?screen_name=${user}`
   return await fetch(proxyurl + url, {
     method: 'GET',
     headers: {
@@ -23,5 +23,5 @@ export const getUser = async user => {
     }
   })
     .then(res => res.json())
-    .then(result => console.log(result), error => console.error(error));
-};
+    .then(result => console.log(result), error => console.error(error))
+}

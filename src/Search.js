@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { getTweets, getUser } from './api';
+import React, { useState } from 'react'
+import { getTweets, getUser } from './api'
 
-import { Form, InputGroup, Button } from 'react-bootstrap';
+import { Form, InputGroup, Button } from 'react-bootstrap'
 
-import './Search.css';
+import './Search.css'
 
 const Search = () => {
   const initState = {
     user: ''
-  };
+  }
 
-  const [formData, setFormData] = useState(initState);
-  const { user } = formData;
+  const [formData, setFormData] = useState(initState)
+  const { user } = formData
 
   const onChange = e =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmit = e => {
-    e.preventDefault();
-    getTweets(user);
-    getUser(user);
-    setFormData(initState);
-  };
+    e.preventDefault()
+    getTweets(user)
+    getUser(user)
+    setFormData(initState)
+  }
 
   return (
     <aside className='Search'>
@@ -46,7 +46,7 @@ const Search = () => {
         </InputGroup>
       </Form>
     </aside>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search
